@@ -90,24 +90,44 @@ int	big_index(t_stack *stack)
 
 int	min_index(t_stack *stack)
 {
-	int		i;
-	int		min;
-	t_stack	*temp;
+	t_stack	*tmp;
+	int			i;
 
-	temp = stack;
-	min = stack->data;
-	stack = stack -> next;
+	tmp = stack;
 	i = 0;
 	while (stack != NULL)
 	{
-		if (min > stack->data)
-			min = stack->data;
-		stack = stack -> next;
-	}
-	while (temp -> data != min)
-	{
-		i++;
-		temp = temp -> next;
+		if (tmp->data <= stack->data)
+			stack = stack->next;
+		else
+		{
+			tmp = tmp->next;
+			i++;
+		}
 	}
 	return (i);
 }
+
+// int	min_index(t_stack *stack)
+// {
+// 	int		i;
+// 	int		min;
+// 	t_stack	*temp;
+
+// 	temp = stack;
+// 	min = stack->data;
+// 	stack = stack -> next;
+// 	i = 0;
+// 	while (stack != NULL)
+// 	{
+// 		if (min > stack->data)
+// 			min = stack->data;
+// 		stack = stack -> next;
+// 	}
+// 	while (temp -> data != min)
+// 	{
+// 		i++;
+// 		temp = temp -> next;
+// 	}
+// 	return (i);
+// }

@@ -12,18 +12,18 @@
 
 #include "push_swap.h"
 
-// void	printlist(t_stack *stack)
-// {
-// 	t_stack	*q;
+void	printlist(t_stack *stack)
+{
+	t_stack	*q;
 
-// 	q = stack;
-// 	while (q != NULL)
-// 	{
-// 		//printf("%d->", q->data);
-// 		q = q->next;
-// 	}
-// 	//printf("\n");
-// }
+	q = stack;
+	while (q != NULL)
+	{
+		printf("%d->", q->data);
+		q = q->next;
+	}
+	printf("\n");
+}
 
 t_stack	*push_swap(t_stack *stack_a)
 {
@@ -43,7 +43,7 @@ t_stack	*push_swap(t_stack *stack_a)
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	t_stack	*stack;
+	t_stack *stack;
 
 	stack_a = NULL;
 	if (!(is_number(argc, argv)))
@@ -56,7 +56,7 @@ int	main(int argc, char **argv)
 		error(stack_a);
 	if (!(is_uniq(stack_a)))
 		error(stack_a);
-	//printlist(stack_a);
+	printlist(stack_a);
 	stack = push_swap(stack_a);
-	//printlist(stack);
+	printlist(stack);
 }
