@@ -6,7 +6,7 @@
 /*   By: oozcan <oozcan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 20:26:23 by oozcan            #+#    #+#             */
-/*   Updated: 2022/07/02 13:17:04 by oozcan           ###   ########.fr       */
+/*   Updated: 2022/07/02 15:27:15 by oozcan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ void	onearg(t_stack **stack_a, int argc, char **argv)
 		push(stack_a, ft_atoi(&argv[argc][j + 1]));
 		while (argv[argc][j] == ' ')
 			j--;
-		if (j == 0)
-			push(stack_a, ft_atoi(&argv[argc][j]));
 	}
 }
 
